@@ -1,0 +1,2 @@
+trimesh==2.37.20
+opencv-python
