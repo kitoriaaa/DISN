@@ -1,6 +1,5 @@
 .PHONY: docker-build
 docker-build:
-	-sudo docker rmi kobayashi/disn
 	sudo docker build -t kobayashi/disn container
 
 .PHONY: docker-run
@@ -14,4 +13,5 @@ clean:
 
 .PHONY: demo
 demo:
+	 . /usr/workspace/isosurface/LIB_PATH; \
 	 python -u demo/demo.py --cam_est --log_dir checkpoint/SDF_DISN/ --cam_log_dir cam_est/checkpoint/cam_DISN/ --img_feat_twostream --sdf_res 64 &> log/create_sdf.log
